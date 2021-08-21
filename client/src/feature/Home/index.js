@@ -28,16 +28,18 @@ function Home({ props }) {
   const commands = [
     {
       command: "hello",
-      callback: () => {
+      callback: ({ resetTranscript }) => {
         speak({ text: "I'm listening your command, sir !" });
         setIsCommand(true);
+        resetTranscript();
       },
     },
     {
       command: "stop",
-      callback: () => {
+      callback: ({ resetTranscript }) => {
         speak({ text: "See you next time !" });
         setIsCommand(false);
+        resetTranscript();
       },
     },
     {
@@ -54,19 +56,30 @@ function Home({ props }) {
           setIsMusic(true);
           audio.play();
           resetTranscript();
+        } else {
+          speak({ text: "You have to say Active to use function !" });
         }
       },
     },
     {
       command: "tải lại",
       callback: () => {
-        window.location.reload();
+        if (isCommand) {
+          window.location.reload();
+        } else {
+          speak({ text: "You have to say Active to use function !" });
+        }
       },
     },
     {
       command: "tắt nhạc",
-      callback: () => {
-        if (isCommand) audio.pause();
+      callback: ({ resetTranscript }) => {
+        if (isCommand) {
+          audio.pause();
+        } else {
+          speak({ text: "You have to say Active to use function !" });
+        }
+        resetTranscript();
       },
     },
     {
@@ -75,6 +88,9 @@ function Home({ props }) {
         if (isCommand) {
           videoID && videoID.setAttribute("src", "");
           setVideo(null);
+          resetTranscript();
+        } else {
+          speak({ text: "You have to say Active to use function !" });
         }
       },
     },
@@ -84,24 +100,31 @@ function Home({ props }) {
         if (isCommand) {
           playAnother();
           resetTranscript();
+        } else {
+          speak({ text: "You have to say Active to use function !" });
         }
       },
     },
     {
       command: "max volume",
       callback: ({ resetTranscript }) => {
-        if (audio) {
-          audio.volume = 0.5;
-          resetTranscript();
+        if (isCommand) {
+          if (audio) {
+            audio.volume = 0.5;
+            resetTranscript();
+          }
+        } else {
+          speak({ text: "You have to say Active to use function !" });
         }
       },
     },
     {
       command: "small volume",
-      callback: () => {
+      callback: ({ resetTranscript }) => {
         if (audio) {
           audio.volume = 0.1;
         }
+        resetTranscript();
       },
     },
 
@@ -121,6 +144,8 @@ function Home({ props }) {
             } catch (error) {}
           })();
           resetTranscript();
+        } else {
+          speak({ text: "You have to say Active to use function !" });
         }
       },
     },
