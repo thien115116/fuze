@@ -12,6 +12,12 @@ const playlist = [
   `${Global.url}/music/thatgirl.mp3`,
   `${Global.url}/music/lostsky.mp3`,
   `${Global.url}/music/vitoiconsong.mp3`,
+  `${Global.url}/music/duskstilldown.mp3`,
+  `${Global.url}/music/eastofeden.mp3`,
+  `${Global.url}/music/thewayiwillloveyou.mp3`,
+  `${Global.url}/music/unstopable.mp3`,
+  `${Global.url}/music/waitingforlove.mp3`,
+  `${Global.url}/music/wrapmeintheplastic.mp3`,
 ]; // List of songs
 export const listMusic = {
   arrayMusic: playlist,
