@@ -1,4 +1,3 @@
-// let BASE_URL = `https://fe9469c32cc0.ngrok.io`;
 let BASE_URL = `https://secure-atoll-29720.herokuapp.com`;
 // let BASE_URL = `http://localhost:3000`;
 //alan key
