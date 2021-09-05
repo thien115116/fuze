@@ -1,18 +1,12 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+
 import * as IoIcons from "react-icons/io";
 import { SidebarData } from "./SidebarData/SidebarData";
 import { Link } from "react-router-dom";
+import { Wrap } from "components/GlobalComponent";
+import MouseRing from "components/MouseRing";
+
 //style Component
-const Wrap = styled.div`
-  height: 100vh;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #603cbb;
-  overflow: hidden;
-`;
 
 function Effect1() {
   const [state, setState] = useState(true);
@@ -101,6 +95,7 @@ function Effect1() {
             <IconChange state={state} />
           </div>
         </div>
+        <MouseRing />
       </Wrap>
     </>
   );

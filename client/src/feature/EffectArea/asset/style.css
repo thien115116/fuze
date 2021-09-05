@@ -1,4 +1,4 @@
-/* Effect */
+/* Effect 1*/
 
 @keyframes zoom-out {
     0% {
@@ -109,4 +109,210 @@
     transition: opacity;
     transition-delay: 1s;
     animation: hide 1.5s ease;
+}
+
+/* Effect 2 - Mouse Circle Text */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.text {
+    font-size: 25px;
+    color: white;
+    user-select: none;
+    position: absolute;
+    pointer-events: none;
+    animation: spin 7s linear infinite;
+}
+
+.text span {
+    display: inline-block;
+    top: -100px;
+    position: absolute;
+    text-transform: uppercase;
+    transform-origin: 0 100px;
+}
+
+/* Effect 3 - Load */
+
+.loading {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.loading .load {
+    position: absolute;
+    transform: rotate(calc(18deg * var(--i)));
+    transform-origin: 0 75px;
+    animation: load 1.9s ease-in-out infinite;
+    border-radius: 10px;
+    animation-delay: calc(0.05s * var(--i));
+}
+
+/* 1/20 = 0.05 */
+
+@keyframes load {
+    0%, 50% {
+        background-color: #000;
+        box-shadow: none;
+    }
+    50.1%, 100% {
+        background-color: rgb(58, 188, 211);
+        box-shadow: 0 0 5px rgb(58, 188, 211), 0 0 15px rgb(58, 188, 211), 0 0 30px rgb(58, 188, 211), 0 0 60px rgb(58, 188, 211), 0 0 90px rgb(58, 188, 211)
+    }
+}
+
+.section {
+    animation: changeColorBg 10s linear infinite;
+}
+
+@keyframes changeColorBg {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    letter-spacing: 2px;
+    animation: changeColor 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes changeColor {
+    0%, 50% {
+        color: #000;
+        text-shadow: none;
+    }
+    50.1%, 100% {
+        color: rgb(58, 188, 211);
+        text-shadow: 0 0 5px rgb(58, 188, 211), 0 0 15px rgb(58, 188, 211);
+    }
+}
+
+/* Effect 4 - Card Responsive */
+
+.res.card {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    transition: .5s;
+    background: linear-gradient(90deg, rgba(198, 210, 210, 1) 0%, rgba(214, 228, 231, 1) 47%, rgba(155, 219, 227, 1) 100%);
+}
+
+.res.card .content {
+    position: relative;
+    width: 50%;
+    left: 25%;
+    padding: 20px 20px 20px;
+    transition: .5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.res.card:hover .content {
+    left: 0%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.res.card .content h2 {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 1em;
+}
+
+.res.card .content p {
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.res.card .content ul {
+    margin: 20px 0;
+}
+
+.res.card .content a {
+    color: #fff;
+    position: relative;
+    background-color: #000;
+    padding: 10px 20px;
+    font-weight: 700;
+}
+
+.res.card .content a:hover {
+    background-color: burlywood;
+    color: #000;
+}
+
+.res.card img {
+    position: absolute;
+    bottom: 0;
+    height: 400px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: .5s ease;
+}
+
+.res.card:hover img {
+    left: 70%;
+    height: 500px;
+}
+
+@media (max-width: 991px) {
+    .res.card {
+        width: auto;
+        max-width: 600px;
+        margin: 40px 20px;
+        justify-content: flex-start;
+    }
+    .res.card:hover {
+        height: 600px;
+    }
+    .res.card:hover img {
+        left: 50%;
+        height: 430px;
+    }
+    .res.card .content {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .wrap {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:420px) {
+    .res.card:hover img {
+        height: 350px;
+    }
+    .res.card .content {
+        padding: 30px;
+    }
 }

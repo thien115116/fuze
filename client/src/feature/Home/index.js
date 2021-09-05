@@ -4,7 +4,7 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 import { listMusic } from "../../resource/musicSrc";
-import { Global } from "../../constants/Global";
+
 import youtubeLoad from "../../service/youtubeLoad";
 import { useSpeechSynthesis } from "react-speech-kit";
 
@@ -12,24 +12,15 @@ function Home({ props }) {
   const [isMusic, setIsMusic] = useState(false);
   const [audio, setAudio] = useState(null);
   // const [index, setIndex] = useState(null);
-  const [src, setSrc] = useState(true);
   const [video, setVideo] = useState(null);
   const [videoID, setVideoID] = useState(null);
   const [isCommand, setIsCommand] = useState(false);
-  const [form, setForm] = useState({});
-  const inputChange = (e) => {
-    e.preventDefault();
-    let name = e.target.name;
-    let value = e.target.value;
-    setForm({ ...form, [name]: value });
-  };
   // console.log(isCommand);
   const { speak } = useSpeechSynthesis();
   let playlist = listMusic.arrayMusic;
   useEffect(() => {
     setAudio(document.getElementById("audio"));
     if (audio) audio.volume = 0.1;
-    setSrc(document.getElementById("src"));
     setVideoID(document.getElementById("video"));
   }, [audio]);
 
