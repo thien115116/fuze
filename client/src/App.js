@@ -8,6 +8,7 @@ import Load from "components/Load";
 
 const Music = React.lazy(() => import("./feature/Music/index"));
 const Home = React.lazy(() => import("./feature/Home/index"));
+const VoiceControl = React.lazy(() => import("./feature/VoiceControl/index"));
 const DragContent = React.lazy(() => import("./feature/DragContent/index"));
 const EffectArea = React.lazy(() => import("./feature/EffectArea/index"));
 
@@ -29,6 +30,9 @@ function App(props) {
               </Route>
               <Route path="/effect">
                 <EffectArea />
+              </Route>
+              <Route path="/voice">
+                <VoiceControl />
               </Route>
             </Switch>
           </Suspense>

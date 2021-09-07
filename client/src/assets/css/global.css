@@ -2,3 +2,164 @@
 a {
     text-decoration: unset;
 }
+
+/* Banner */
+
+header {
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    left: 20px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass_1 {
+    position: absolute;
+    bottom: -50px;
+    right: -35px;
+    width: 70px;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass_1 span {
+    border-radius: 20px;
+    font-size: 48px;
+    display: block;
+}
+
+.glass_1 span a {
+    color: unset;
+}
+
+.glass_1 span.fb {
+    color: rgb(89, 111, 235);
+}
+
+.glass_1 span.ytb {
+    color: rgb(226, 67, 27);
+}
+
+.glass_1 span.insta {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+
+header .logo {
+    color: #8a2435;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+header ul li {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+header ul li a {
+    font-weight: 500;
+    color: #8a2435;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+header ul li a:hover, header ul li a.active {
+    background: #fff;
+    color: #8a2435;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner .title {
+    font-size: 36px;
+    color: #8a2435;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.banner {
+    position: relative;
+    width: calc(100% - 800px);
+    height: calc(100vh - 280px);
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 50px;
+}
+
+.banner .content {
+    transform: translateX(-100px);
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-left: 110px;
+}
+
+.banner .content p {
+    color: #8a2435;
+    font-size: 20px;
+}
+
+.banner .content a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #fff;
+    color: #8a2435;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.imgBx img {
+    max-width: 400px;
+    animation: animate 5s linear infinite;
+}
+
+.imgBx1 {
+    position: absolute;
+    left: -30%
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import { Wrap } from "components/GlobalComponent";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 export default function Load() {
   const SpanLoad = styled.span`
     width: 5px;
@@ -9,12 +8,7 @@ export default function Load() {
     background-color: black;
   `;
   return (
-    <Wrap className="section" style={{ backgroundColor: "white" }}>
-      <div style={{ top: 0, left: 0, position: "absolute", padding: 20 }}>
-        <Link style={{ color: "white", fontSize: 30 }} to="/effect">
-          Back
-        </Link>
-      </div>
+    <Wrap style={{ background: "white" }}>
       <div className="loading">
         <SpanLoad className="load" style={{ "--i": 1 }}></SpanLoad>
         <SpanLoad className="load" style={{ "--i": 2 }}></SpanLoad>

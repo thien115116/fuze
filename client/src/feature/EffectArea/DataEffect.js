@@ -15,4 +15,8 @@ export const EffectList = [
     name: "Card Responsive",
     path: "/effect/effect-4",
   },
+  {
+    name: "Glassmorphism UI",
+    path: "/",
+  },
 ];

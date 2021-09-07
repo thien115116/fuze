@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
-// import alanBtn from "@alan-ai/alan-sdk-web";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import { listMusic } from "../../resource/musicSrc";
+import { listMusic } from "resource/musicSrc/index";
 
-import youtubeLoad from "../../service/youtubeLoad";
+import youtubeLoad from "service/youtubeLoad";
 import { useSpeechSynthesis } from "react-speech-kit";
 
 function Home({ props }) {
   const [isMusic, setIsMusic] = useState(false);
   const [audio, setAudio] = useState(null);
-  // const [index, setIndex] = useState(null);
   const [video, setVideo] = useState(null);
   const [videoID, setVideoID] = useState(null);
   const [isCommand, setIsCommand] = useState(false);
-  // console.log(isCommand);
   const { speak } = useSpeechSynthesis();
   let playlist = listMusic.arrayMusic;
   useEffect(() => {
@@ -138,7 +135,6 @@ function Home({ props }) {
                 params: { q: key },
               });
               console.log(res.data);
-              // setIndex(Math.floor(Math.random() * res.data.items.length));
               setVideo(res.data.items);
             } catch (error) {}
           })();
@@ -149,7 +145,7 @@ function Home({ props }) {
       },
     },
   ];
-  // console.log(index);
+
   const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition(
     { commands }
   );
