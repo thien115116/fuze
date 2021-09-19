@@ -1,69 +1,30 @@
 import React from "react";
-import { Wrapper } from "components/GlobalComponent";
-import Avatar from "constants/081.png";
-import Avatar2 from "constants/09.png";
-import * as AiIcons from "react-icons/ai";
+import MouseRing from "components/MouseRing";
+import Header from "./components/HomePart/Header";
+import Navbar from "./components/HomePart/Navbar";
+import EffectWrap from "./components/HomePart/EffectWrap";
+import HomeSection from "./MainPage/HomeSection";
 export default function Home() {
   return (
-    <Wrapper>
-      <div className="banner">
-        <header>
-          <a href="/#" className="logo">
-            Logo
-          </a>
-          <ul>
-            <li>
-              <a href="/" className="active">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/effect">Effect</a>
-            </li>
-            <li>
-              <a href="/voice">Voice Control</a>
-            </li>
-            <li>
-              <a href="/#">Contact</a>
-            </li>
-          </ul>
-        </header>
-        <div className="content">
-          <h2 className="title">Web Designer & Developer</h2>
-          <p>
-            Tên của mình là Trần Ngọc Thiên. Mình đang cần tìm một vị trí lập
-            trình Front-end.
-          </p>
-          <a href="/#">Read More</a>
+    <div className="section">
+      <header className="header">
+        <Header />
+      </header>
+      <nav className="nav-menu">
+        <Navbar />
+      </nav>
+      <div className="fade-out-effect"></div>
+      <section className="home-section" id="home">
+        <div className="effect-wrap">
+          <EffectWrap />
         </div>
-        <div className="glass_1">
-          <span className="fb">
-            <a
-              href="https://www.facebook.com/fuzethien/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <AiIcons.AiFillFacebook />
-            </a>
-          </span>
-          <span className="ytb">
-            <a href="/#">
-              <AiIcons.AiFillYoutube />
-            </a>
-          </span>
-          <span className="insta">
-            <a href="/#">
-              <AiIcons.AiOutlineInstagram />
-            </a>
-          </span>
+        <div className="container">
+          <div className="row full-screen align-items-center">
+            <HomeSection />
+          </div>
         </div>
-        <div className="imgBx">
-          <img src={Avatar} alt="abc"></img>
-        </div>
-        <div className="imgBx1">
-          <img src={Avatar2} alt="abc"></img>
-        </div>
-      </div>
-    </Wrapper>
+      </section>
+      <MouseRing />
+    </div>
   );
 }

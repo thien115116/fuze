@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+.button_readMore {
+    position: relative;
+    width: 160px;
+    height: 50px;
+    margin: 15px 10px;
+    background-color: #2b2c2f;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "Raleway", sans-serif;
+}
+
+.button_readMore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #fb839e;
+    transition: .5s ease-in-out;
+    transition-delay: .5s;
+}
+
+.button_readMore::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #fb839e;
+    transition: .5s ease-in-out;
+    transition-delay: .5s;
+}
+
+.button_readMore:hover::after, .button_readMore:hover::before {
+    width: 50%;
+    transition-delay: 0s;
+}
+
+.button_readMore span {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.button_readMore span:nth-child(1) {
+    transition-delay: 0.75s;
+}
+
+.button_readMore:hover span:nth-child(1) {
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+.button_readMore span:nth-child(2) {
+    transform: scale(3);
+    opacity: 0;
+    color: #111;
+    transition-delay: 0s;
+    font-weight: 700;
+}
+
+.button_readMore:hover span:nth-child(2) {
+    transform: scale(1);
+    transition-delay: 0s;
+    opacity: 1;
+    z-index: 10;
+    transition-delay: .5s;
+}

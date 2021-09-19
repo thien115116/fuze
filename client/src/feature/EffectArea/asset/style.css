@@ -316,3 +316,176 @@
         padding: 30px;
     }
 }
+
+/* Hiệu ứng 5 Glassmorphism Card */
+
+.effect_5 .box1 {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 30px;
+    transition: 0.5s;
+}
+
+.effect_5 .box1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transition: .5s;
+    transform: skewX(15deg);
+}
+
+.effect_5 .box1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transition: .5s;
+    transform: skewX(15deg);
+    filter: blur(15px);
+}
+
+.effect_5 .box1:hover::before, .effect_5 .box1:hover::after {
+    transform: skewX(0deg);
+    left: 20px;
+    width: calc(100% - 90px);
+}
+
+.effect_5 .box1:nth-child(2)::before, .effect_5 .box1:nth-child(2)::after {
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+
+.effect_5 .box1:nth-child(3)::before, .effect_5 .box1:nth-child(3)::after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.effect_5 .box1:nth-child(4)::before, .effect_5 .box1:nth-child(4)::after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.effect_5 .box1 span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.effect_5 .box1 span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: .5s;
+    animation: effect-5 2s linear infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes effect-5 {
+    0%, 100% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.effect_5 .box1:hover span::before {
+    top: -50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.effect_5 .box1 span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: .5s;
+    animation: effect-5 2s linear infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation-delay: 1s;
+}
+
+.effect_5 .box1:hover span::after {
+    bottom: -50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+}
+
+.box1 .content {
+    position: relative;
+    left: 0;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: 0.5s;
+    color: #fff;
+    z-index: 1;
+}
+
+.box1 .content h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.box1 .content p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 22.4px;
+}
+
+.box1 .content a {
+    display: inline-block;
+    font-size: 18px;
+    color: #000;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.box1 .content a:hover {
+    background-color: #ff0058;
+    color: #fff;
+}
+
+.box1:hover .content {
+    left: -25px;
+    padding: 60px 40px;
+}

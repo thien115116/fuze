@@ -19,4 +19,12 @@ export const EffectList = [
     name: "Glassmorphism UI",
     path: "/",
   },
+  {
+    name: "Glowing Gradient Glassmorphism Card Hover Effects",
+    path: "/effect/effect-5",
+  },
+  {
+    name: "Glassmorphism Button Hover Effects",
+    path: "/effect/effect-6",
+  },
 ];

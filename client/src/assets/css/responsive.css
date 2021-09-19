@@ -1,0 +1,114 @@
+@media screen and (max-width:991px) {
+    body .service-section .service-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    body .portfolio-section .portfolio-item, body .contact-section .w-50, body .contact-section .contact-item, body .portfolio-popup .info, body .portfolio-popup .description, body .service-section .service-item, body .about-section .skills .skill-item, body .about-section .about-info, body .about-section .about-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    body .home-section .home-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    body .home-section .home-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home-section .home-text {
+        order: 2;
+        text-align: center;
+    }
+    body .home-section .full-screen {
+        padding: 120px 0;
+    }
+    body .home-section .home-img .img-box {
+        margin-bottom: 40px;
+        max-width: 350px;
+    }
+    body .effect-3 {
+        margin-left: -60px;
+    }
+    body .effect-4 {
+        left: 5%;
+    }
+    body .effect-5 {
+        right: 4%;
+    }
+    body .about-section .about-img {
+        padding-bottom: 30px;
+    }
+    body .about-section .timeline .timeline-item {
+        margin-bottom: 40px;
+    }
+    body .about-section .timeline .timeline-item:last-child {
+        margin-bottom: 0px;
+    }
+    body .about-section .timeline .timeline-item:nth-child(odd) {
+        padding-right: 15px;
+        text-align: left;
+        padding-left: 75px;
+    }
+    body .about-section .timeline .timeline-item:nth-child(odd) .icon {
+        right: auto;
+        left: -60px;
+    }
+    body .about-section .timeline .timeline-item:nth-child(even) {
+        padding-left: 75px;
+        text-align: left;
+    }
+    body .about-section .timeline .timeline-item:nth-child(even) .icon {
+        left: -60px;
+    }
+    body .about-section .timeline .timeline-item:nth-child(odd) .timeline-item-inner:before {
+        left: -30px;
+        right: auto;
+    }
+    body .about-section .timeline:before {
+        left: 35px;
+    }
+    body .portfolio-popup .pp-details {
+        min-height: auto;
+    }
+    body .portfolio-popup .pp-details-inner {
+        padding: 30px 45px;
+    }
+    body .contact-section .contact-item:last-child {
+        margin-bottom: 10px;
+    }
+    body .contact-section .submit-btn {
+        text-align: center;
+    }
+    body .style-switcher {
+        top: 53%;
+    }
+    body .portfolio-section .portfolio-item {
+        min-height: auto;
+        height: auto;
+    }
+    body .testimonial-section {
+        height: auto;
+        min-height: 70vh;
+    }
+    body .read-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body .text {
+        display: none;
+    }
+}
+
+@media(max-width:574px) {
+    body .home-section .home-img .img-box {
+        max-width: 260px;
+        max-height: 260px;
+    }
+    body .home-section .home-text h2 {
+        font-size: 40px;
+    }
+}

@@ -6,6 +6,9 @@ import MainTable from "./Main/MainTable";
 import CircleTextAnimation from "./MouseEffect/CircleTextAnimation";
 import Load from "./LoadEffect/Load";
 import CardResponsive from "./CardResponsive/CardResponsive";
+import GlassmorphismCard from "./GlassmorphismCard";
+import GlassmorphismButton from "./GlassmorphismButton";
+
 export default function EffectArea() {
   const { path } = useRouteMatch();
   return (
@@ -25,6 +28,12 @@ export default function EffectArea() {
         </Route>
         <Route path={`${path}/effect-4`}>
           <CardResponsive />
+        </Route>
+        <Route path={`${path}/effect-5`}>
+          <GlassmorphismCard />
+        </Route>
+        <Route path={`${path}/effect-6`}>
+          <GlassmorphismButton />
         </Route>
       </Switch>
     </>

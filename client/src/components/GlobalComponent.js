@@ -11,11 +11,12 @@ export const Wrap = styled.div`
 `;
 export const Wrapper = styled.section`
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   background: linear-gradient(
     138deg,
     rgba(237, 225, 231, 1) 0%,

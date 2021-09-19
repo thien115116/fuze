@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function MouseRing() {
   const [text, setText] = useState(null);
@@ -23,12 +22,7 @@ export default function MouseRing() {
 
   return (
     <>
-      <div style={{ top: 0, left: 0, position: "absolute", padding: 20 }}>
-        <Link style={{ color: "white", fontSize: 30 }} to="/effect">
-          Back
-        </Link>
-      </div>
-      <h2 className="text" style={{ color: "#000" }}>
+      <h2 className="text" style={{ color: "#fff" }}>
         Trần - Ngọc - Thiên -
       </h2>
     </>
