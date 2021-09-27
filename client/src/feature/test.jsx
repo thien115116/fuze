@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
+import React, { useMemo, useState } from "react";
 import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage";
 
@@ -13,7 +13,8 @@ const anchors = ["home", "about", "skill"];
 export default function FullpageWrapper() {
   return (
     <>
-      <ReactFullpage
+      <Pagination />
+      {/* <ReactFullpage
         anchors={anchors}
         navigation
         navigationTooltips={anchors}
@@ -22,12 +23,56 @@ export default function FullpageWrapper() {
             <>
               <HomeSection />
               <About />
-              <Skill />
+              <Pagination />
             </>
           );
         }}
-      />
+      /> */}
       ;
     </>
   );
 }
+const Pagination = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalItems = 53;
+  const MAX_ITEMS = 5;
+  const MAX_Pagination_Item = [1, 2, 3, 4, 5];
+  const MAX_PAGE = useMemo(() => {
+    return Math.ceil(totalItems / MAX_ITEMS);
+  }, []);
+  console.log(MAX_PAGE);
+  return (
+    <>
+      <PaginationItem
+        MAX_PAGE={MAX_PAGE}
+        currentPage={currentPage}
+        MAX_Pagination_Item={MAX_Pagination_Item}
+        setCurrentPage={setCurrentPage}
+      />
+    </>
+  );
+};
+const PaginationItem = ({ MAX_PAGE, currentPage, MAX_Pagination_Item,setCurrentPage }) => {
+  return (
+    <>
+      {MAX_Pagination_Item.map((item, index) => {
+        switch (index) {
+          case 0:
+            return (
+              <>
+                <button onClick={setCurrentPage()}>{currentPage}</button>
+              </>
+            );
+          case 1:
+            return <>{currentPage + 1}</>;
+          case 2:
+            return <>...</>;
+          case 3:
+            return <> d</>;
+          default:
+            return <> e</>;
+        }
+      })}
+    </>
+  );
+};

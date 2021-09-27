@@ -1,0 +1,100 @@
+.btn-e-shiny {
+    position: relative;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    transition: .5s;
+}
+
+.btn-e-shiny::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-e-shiny::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: .5s;
+    transition-delay: .25s;
+}
+
+.btn-e-shiny:hover {
+    color: #fff;
+}
+
+.btn-e-shiny:hover::after {
+    left: 100%;
+}
+
+.btn-e-shiny span {
+    position: absolute;
+    display: block;
+    transition: .5s ease;
+}
+
+.btn-e-shiny span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.btn-e-shiny:hover span:nth-child(1) {
+    width: 100%;
+    transform: translateX(100%);
+}
+
+.btn-e-shiny span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+}
+
+.btn-e-shiny:hover span:nth-child(3) {
+    width: 100%;
+    transform: translateX(-100%);
+}
+
+.btn-e-shiny span:nth-child(2) {
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+    background: #fff;
+}
+
+.btn-e-shiny:hover span:nth-child(2) {
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.btn-e-shiny span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+    background: #fff;
+}
+
+.btn-e-shiny:hover span:nth-child(4) {
+    height: 100%;
+    transform: translateY(-100%);
+}

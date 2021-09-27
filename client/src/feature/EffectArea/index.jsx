@@ -8,6 +8,7 @@ import Load from "./LoadEffect/Load";
 import CardResponsive from "./CardResponsive/CardResponsive";
 import GlassmorphismCard from "./GlassmorphismCard";
 import GlassmorphismButton from "./GlassmorphismButton";
+import ShinyGlassButton from "./ShinyGlassButton/index";
 
 export default function EffectArea() {
   const { path } = useRouteMatch();
@@ -34,6 +35,9 @@ export default function EffectArea() {
         </Route>
         <Route path={`${path}/effect-6`}>
           <GlassmorphismButton />
+        </Route>
+        <Route path={`${path}/effect-7`}>
+          <ShinyGlassButton />
         </Route>
       </Switch>
     </>

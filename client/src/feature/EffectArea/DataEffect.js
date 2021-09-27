@@ -26,5 +26,9 @@ export const EffectList = [
   {
     name: "Glassmorphism Button Hover Effects",
     path: "/effect/effect-6",
+  }, 
+  {
+    name: "Shiny Glassmorphism Button Hover Effects",
+    path: "/effect/effect-7",
   },
 ];
